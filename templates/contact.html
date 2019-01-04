@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Contact GIMME
+{% endblock %}
+
+{% block main %}
+<br>
+<br>
+<br>
+<h1>Contact GIMME</h1>
+<br>
+<div class="contact-container">
+<form action="/contact" method="post">
+
+    <h6>Why are you reaching out?</h6>
+        <div class="row">
+        <select name="occasion" class="custom-select" required>
+            <option disable selected value=" ">GIMME a reason</option>
+            <option value="Business">Business Inquiry</option>
+            <option value="Comment">General Comment</option>
+            <option value="Question"> General Question</option>
+            <option value="Partner">Partner with GIMME</option>
+            <option value="Survey">Survey Idea</option>
+            <option value="Work for GIMME">Work for GIMME</option>
+            <option value="Other">OTHER</option>
+        </select>
+        </div>
+
+    <br>
+
+    <h6>Let us know your email address so we can contact you:</h6>
+        <div class="row">
+        <input autocomplete="off" autofocus class="form-control" name="email" placeholder="Email Address" type="email" style="width: 100%; margin: auto;">
+            </div>
+
+    <br>
+
+    <h6>Please enter your message below:</h6>
+        <div class="row">
+        <textarea name="message" class="form-control"  id="exampleFormControlTextarea1" rows="6" style="width: 100%; margin: auto;"required></textarea>
+            </div>
+
+
+    <br>
+
+    <div class="row">
+        <button class="btn btn-GIMME" type="submit" style="margin:auto;">Send</button>
+            </div>
+
+</form>
+</div>
+{% endblock %}

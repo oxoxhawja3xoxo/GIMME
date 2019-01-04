@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Search
+{% endblock %}
+
+{% block main %}
+       <br>
+<br>
+<br>
+<br>
+<br>
+         <main class="container p-5">
+             <h1>Search Users</h1><br>
+             Has your friend already filled out a GIMME survey?
+<br> Check here!
+<br>
+<br>
+    <form action="/search" method="post">
+        <div class="form-group">
+                <input autofocus type="text" name="first_name" class="form-control" id="First Name" placeholder="First Name" required>
+                <input autofocus type="text" name="last_name" class="form-control" id="Last Name" placeholder="Last Name" required>
+        </div>
+        <button class="btn btn-light btn-pink" type="submit">Search</button>
+    </form>
+
+        </main>
+
+</form>
+
+
+
+{% endblock %}

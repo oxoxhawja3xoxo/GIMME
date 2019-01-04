@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh7USSwiPGQ3q5d0.woff2) format('woff2');
+}
+
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+navbar
+{
+   font-family: "Lato";
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+    font-family: "Lato";
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+.btn-pink {
+  color: #f5288d;
+}
+
+
+.btn-GIMME
+{
+background-color: #f5288d;
+color:#FFF;
+border-color: #f5288d;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+img .img-responsive
+{
+     height:150px;
+    width:100%;
+}
+.container-pics
+{
+    width: 40%;
+    margin: 0 auto;
+}
+
+.contact-container {
+  width: 40%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.GIMME-container {
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+    margin: auto;
+}
+
+a {
+    color: #f5288d;
+    font-size: 13px;
+}

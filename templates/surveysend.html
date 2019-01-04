@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Survey
+{% endblock %}
+
+{% block main %}
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <br>
+    <br>
+    <br>
+    <h1>Send a Survey!</h1>
+    <br>
+    <br>
+<form action="/surveysend" method="post">
+
+Please enter your friends first name:
+    <div class="form-group">
+        <input autocomplete="off" autofocus type="text" name="first" class="form-control" id="First Name" placeholder="First Name"  required>
+    </div>
+Please enter your friends email address:
+    <div class="form-group">
+        <input autocomplete="off" autofocus class="form-control" name="email" placeholder="Email Address" type="email" required>
+        </div>
+Please enter any additional message you'd like to send to your friend:
+    <div class="form-group">
+        <textarea autocomplete="off" autofocus name="extra" class="form-control" style="width: 40%; margin: auto;" id="exampleFormControlTextarea1" rows="5" ></textarea>
+    </div>
+        <button class="btn btn-GIMME" type="submit">Send Survey!</button>
+
+</form>
+{% endblock %}

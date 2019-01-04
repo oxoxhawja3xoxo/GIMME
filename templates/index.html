@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+GIMME
+{% endblock %}
+
+
+
+{% block main %}
+{% if session.user_id %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+        <img src="../static/CROPPEDLOGO.png" alt="Logo" style="width:474px;height:81px;">
+<br>
+<br>
+<br>
+          <form action="/index" method="post">
+        <div class="form-group">
+        <div class="btn-group-vertical">
+        <a class="btn btn-light btn-pink btn-lg " href="/survey" role="button">Give a Gift</a>
+         <br>
+        <br>
+        </div>
+        </div>
+    </form>
+{% else %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+        <img src="../static/CROPPEDLOGO.png" alt="Logo" style="width:474px;height:81px;">
+<br>
+<br>
+<br>
+          <form action="/index" method="post">
+        <div class="form-group">
+        <div class="btn-group-vertical">
+        <a class="btn btn-light btn-md " href="/register" role="button">Register</a>
+        <a class="btn btn-light btn-pink btn-md" href="/login" role="button">Log In</a>
+         <br>
+        <br>
+        </div>
+        </div>
+    </form>
+{% endif %}
+
+{% endblock %}

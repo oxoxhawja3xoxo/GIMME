@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Searched
+{% endblock %}
+
+{% block main %}
+<br>
+<br>
+<br>
+
+<h1>Search results for <b>{{first_name}} {{last_name}}</b>:</h1>
+<br>
+<a class="btn btn-GIMME" role="button" href={{  url_for('search')}}  style="margin:auto;">Search Again</a>
+<br>
+<br>
+
+
+
+
+    <main class="GIMME-container">
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Occasion</th>
+                <th>Shop</th>
+            </tr>
+        </thead>
+        <tbody>
+          {%for user_survey in search.user_surveys%}
+        <tr>
+        <form action="/GIMMEsearch" method="post">
+        <td>{{user_survey.first}}<input type="hidden" value="{{user_survey.first}}" id="First Name" name="first"> {{user_survey.last}}<input type="hidden" value="{{user_survey.last}}" id="Last Name" name="last"></td>
+        <td>{{user_survey.occasion}}<input type="hidden" value="{{user_survey.occasion}}" id="Occasion" name="occasion"></td>
+        <td><button class="btn btn-light btn-pink" type="submit">Shop for {{first_name}}'s {{user_survey.occasion}} </button>
+    </form></td>
+        </tr>
+    {%endfor%}
+        </tbody>
+    </table>
+
+{% endblock %}

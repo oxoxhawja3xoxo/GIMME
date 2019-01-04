@@ -1,0 +1,162 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Survey
+{% endblock %}
+
+{% block main %}
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+<br>
+<br>
+    <br>
+        <h1>Tell Us About The Gift Recipient!</h1>
+    <br>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form action="/surveydofriend" method="post">
+<div class="container">
+
+    <h4>THE BASICS</h4>
+    <!-- The user should input their first name and last name -->
+    <h6>Please enter the recipeint's first and last name:</h6>
+
+
+        <div class="form-group">
+                <input autofocus type="text" name="first" class="form-control" id="First Name" placeholder="First Name" required>
+                <input autofocus type="text" name="last" class="form-control" id="Last Name" placeholder="Last Name" required>
+        </div>
+
+    <!-- The user should select the occasion -->
+    <br>
+    <br>
+    <h4>THE OCCASION</h4>
+    <h6> What's the occasion?</h6>
+        <div class="form-row">
+            <select name="occasion" class="custom-select" style="width: 40%; margin: auto;" required>
+                <option disable selected value=" ">GIMME dat occasion</option>
+                <option value="Anniversary">Anniversary</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Christmas">Christmas</option>
+                <option value="Graduation: High School">Graduation: High School</option>
+                <option value="Graduation: College">Graduation: College</option>
+                <option value="House Warming">Housewarming</option>
+                <option value="Just Because!">Just Because!</option>
+                <option value="Promotion">Promotion</option>
+                <option value="Thank You">Thank You</option>
+                <option value="Valentine's Day">Valentine's Day</option>
+                <option value="Wedding">Wedding</option>
+            </select>
+        </div>
+
+    <!-- The user should check all that apply -->
+    <br>
+    <br>
+    <br>
+    <h4>THEIR LIFESTYLE</h4>
+    <h6>How would you describe this individual's lifestyle? <br>
+    (Please check all that apply)</h6>
+    <div class="form-group">
+            <div class="form-check">
+                <input name="lifestyle" type="checkbox" value="Workaholic" class="form-check-input" id="inlineCheck1">
+                <label class="form-check-label" for="inlineCheck1">Workaholic</label>
+            </div>
+            <div class="form-check">
+                <input name="lifestyle" type="checkbox" value="Fun Loving" class="form-check-input" id="inlineCheck2">
+                <label class="form-check-label" for="inlineCheck2">Fun Loving</label>
+            </div>
+            <div class="form-check form-check">
+                <input name="lifestyle" type="checkbox" value="Free Spirit" class="form-check-input" id="inlineCheck3">
+                <label class="form-check-label" for="inlinecustomCheck3">Free Spirit</label>
+            </div>
+            <div class="form-check">
+                <input name="lifestyle" type="checkbox" value="Academic" class="form-check-input" id="inlineCheck4">
+                <label class="form-check-label" for="inlinecustomCheck4">Academic</label>
+            </div>
+            <div class="form-check">
+                <input name="lifestyle" type="checkbox" value="Other" class="form-check-input" id="inlineCheck5">
+                <label class="form-check-label" for="inlinecustomCheck5">Other</label>
+            </div>
+    <!-- The user should check all that apply -->
+    <br>
+    <br>
+    <h4>LETS PLAY A GAME</h4>
+    <h6>Pick one or the other</h6>
+    <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="personality" id="gridRadios1" value="Introvert">
+                <label class="form-check-label" for="gridRadios1">Introvert   </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="personality" id="gridRadios2" value="Extrovert">
+                <label class="form-check-label" for="gridRadios2">Extrovert   </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="age" id="gridRadios3" value="Youthful">
+                <label class="form-check-label" for="gridRadios1">Youthful   </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="age" id="gridRadios4" value="Mature">
+                <label class="form-check-label" for="gridRadios2">Mature   </label>
+            </div>
+        </div>
+    </div>
+
+            <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="rationality" id="gridRadios5" value="Sentimental">
+                <label class="form-check-label" for="gridRadios1">Sentimental   </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="rationality" id="gridRadios6" value="Practical">
+                <label class="form-check-label" for="gridRadios2">Practical   </label>
+            </div>
+        </div>
+    </div>
+
+                <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="size" id="gridRadios7" value="Big">
+                <label class="form-check-label" for="gridRadios1">Big   </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="size" id="gridRadios8" value="Small">
+                <label class="form-check-label" for="gridRadios2">Small   </label>
+            </div>
+        </div>
+    </div>
+
+
+                    <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soda" id="gridRadios9" value="Coke">
+                <label class="form-check-label" for="gridRadios1">Coke   </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soda" id="gridRadios10" value="Pepsi">
+                <label class="form-check-label" for="gridRadios2">Pepsi   </label>
+            </div>
+        </div>
+    </div>
+
+                        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="terrain" id="gridRadios11" value="Beaches">
+                <label class="form-check-label" for="gridRadios1" >Beaches   </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="terrain" id="gridRadios12" value="Mountains">
+                <label class="form-check-label" for="gridRadios2">Mountains   </label>
+            </div>
+        </div>
+    </div>
+
+                <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <br>
+        <button class="btn btn-GIMME" type="submit">GIMME</button>
+
+    </form>
+
+{% endblock %}

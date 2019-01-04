@@ -1,0 +1,32 @@
+
+
+
+{% extends "layout.html" %}
+
+{% block title %}
+Thanks!
+{% endblock %}
+
+
+
+{% block main %}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+        <img src="../static/CROPPEDLOGO.png" alt="Logo" style="width:474px;height:81px;">
+<br>
+<br>
+<br>
+<h1> Thanks for submitting! </h1>
+<h3> Someone is bound to make your day very special very soon.</h3>
+<h3> Want to make someone else's day?</h3>
+<br>
+<a class="btn btn-GIMME" role="button" href={{  url_for('register')}}  style="margin:auto;">Join GIMME</a>
+
+{% endblock %}

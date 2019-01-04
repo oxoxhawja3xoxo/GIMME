@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   GIFTS
+{% endblock %}
+
+{% block main %}
+<br>
+<br>
+<br>
+<h2>Gifts for <b>{{first}}</b>:</h2>
+
+<div class="GIMME-container">
+    <table class="table ">
+
+        <tbody>
+          {%for entry in gimme.entries%}
+        <tr>
+        <td><a href="{{entry.external_link}}" target="_blank">{{entry.name}}</a></td>
+
+        <td><a href="{{entry.external_link}}" target="_blank">
+            <div class="container container-pics" id="Products">
+                <img class="img-responsive" src="{{entry.image}}">
+            </div>
+            </a></td>
+
+        <td>{{entry.price| usd}}</td>
+        </tr>
+    {%endfor%}
+        </tbody>
+    </table>
+    </div>
+{% endblock %}
